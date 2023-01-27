@@ -3,7 +3,28 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	align-items: center;
+	justify-content: center;
+	padding: rem(7) rem(20) rem(7) rem(20);
+	@extend %ffroboto;
+	line-height: 1.7;
+	letter-spacing: 0.35px;
+	text-align: center;
+	color: #fff;
+	border: 1px solid $orangeColor;
+	border-right: 20px solid $orangeColor;
+	position: relative;
+	&::before {
+		position: absolute;
+		left: 100%;
+		top: 0;
+		width: rem(20);
+		height: 100%;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	@media (any-hover: hover) {
 		&:hover {
 		}
@@ -20,7 +41,13 @@
 	align-items: center;
 	column-gap: rem(10);
 	padding: rem(9) rem(20);
+	transition: background-color 0.3s ease 0s;
 	&::before {
 		color: #1b1b1b;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: darken($orangeColor, 10%);
+		}
 	}
 }

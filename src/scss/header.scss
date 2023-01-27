@@ -1,6 +1,6 @@
 .header {
 	position: relative;
-	z-index: 2;
+	z-index: 50;
 	&::before {
 		content: "";
 		position: absolute;
@@ -26,7 +26,6 @@
 	&__bottom {
 		@include adaptiveValue("padding-top", 30, 15);
 		@include adaptiveValue("padding-bottom", 30, 15);
-		position: relative;
 		&::before {
 			content: "";
 			position: absolute;
@@ -65,8 +64,19 @@
 		display: flex;
 		align-items: center;
 		column-gap: rem(10);
+		transition: text-decoration 0.3s ease 0s;
+		span {
+			transition: all 0.3s ease 0s;
+		}
 		&::before {
 			color: $orangeColor;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 	// .top-header__phone
@@ -119,7 +129,7 @@
 			transition: all 0.3s ease 0s;
 			overflow: auto;
 			padding: rem(150) rem(15) rem(30) rem(15);
-			background-color: rgba($mainColor, 0.7);
+			background-color: rgba($mainColor, 0.9);
 			.menu-open & {
 				left: 0;
 			}

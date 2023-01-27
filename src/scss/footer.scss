@@ -1,3 +1,113 @@
 //====================================================================================================
+.footer {
+	@extend %ffroboto;
+	// .footer__top
+	&__top {
+		@include adaptiveValue("padding-top", 30, 20);
+		@include adaptiveValue("padding-bottom", 30, 20);
+		background-color: #595959;
+	}
+	// .footer__container
+	&__container {
+	}
+	// .footer__bottom
+	&__bottom {
+		background-color: #303030;
+	}
+	// .footer__copy
+	&__copy {
+		text-align: center;
+		padding: rem(15) 0;
+
+		font-size: rem(12);
+		letter-spacing: em(0.05, 12);
+		color: #fff;
+	}
+}
+.top-footer {
+	// .top-footer__body
+	&__body {
+		display: grid;
+		row-gap: rem(30);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(2, minmax(rem(360), 1fr));
+			column-gap: rem(20);
+		}
+	}
+	// .top-footer__content
+	&__content {
+		display: grid;
+		row-gap: rem(30);
+		align-content: start;
+		justify-items: start;
+	}
+	// .top-footer__title
+	&__title {
+		font-size: rem(16);
+		font-weight: 500;
+		letter-spacing: em(0.05, 16);
+		color: #fff;
+	}
+	// .top-footer__text
+	&__text {
+		color: $secondaryColor;
+	}
+	// .top-footer__button
+	&__button {
+	}
+	// .top-footer__contacts
+	&__contacts {
+		color: #fff;
+	}
+	// .top-footer__map
+	&__map {
+		overflow: hidden;
+		padding-bottom: percent(450, 650);
+		position: relative;
+		height: 0;
+		iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+.contacts-footer {
+	display: grid;
+	row-gap: rem(8);
+	&__phone,
+	&__email,
+	&__address {
+		display: flex;
+		align-items: center;
+		column-gap: rem(10);
+		span {
+			transition: all 0.3s ease 0s;
+		}
+		&::before {
+			font-size: rem(14);
+			flex: 0 0 rem(14);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// .contacts-footer__phone
+	&__phone {
+	}
+	// .contacts-footer__email
+	&__email {
+	}
+	// .contacts-footer__address
+	&__address {
+		white-space: nowrap;
+	}
+}
 
 //====================================================================================================
