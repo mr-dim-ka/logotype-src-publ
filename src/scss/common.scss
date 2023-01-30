@@ -2,3 +2,37 @@
 %ffroboto {
 	font-family: Roboto;
 }
+
+.info-block {
+	@media (min-width: $mobile) {
+		max-width: rem(500);
+		padding-left: percent(140, 1170);
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: rem(10);
+			left: 0;
+			width: percent(106, 540);
+			@include adaptiveValue("width", 106, 75, 1170, 767.98);
+			height: rem(2);
+			background-color: $orangeColor;
+		}
+	}
+	// .info-block__title
+	&__title {
+		@extend %ffroboto;
+		font-size: rem(24);
+		font-weight: 500;
+		line-height: 1;
+		color: #212020;
+		&:not(:last-child) {
+			margin-bottom: em(14, 24);
+		}
+	}
+	// .info-block__text
+	&__text {
+		line-height: 1.29;
+		letter-spacing: em(0.14, 14);
+	}
+}
