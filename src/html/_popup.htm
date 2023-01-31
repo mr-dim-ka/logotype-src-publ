@@ -1,10 +1,30 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
+<div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+			<div class="popup__close">
+				<button data-close type="button" class="close-btn _icon-close"></button>
+			</div>
+			<div class="popup__form">
+				<form class="form-contact" action="#">
+					<div class="form-contact__column form-contact__column_1">
+						<div class="form-contact__line">
+							<label class="form-contact__label" for="form-email">E-mail</label>
+							<input id="form-email" class="form-contact__input" autocomplete="off" type="text" name="form[]" data-required="email" data-error="Ошибка" data-value="">
+						</div>
+						<div class="form-contact__line">
+							<label class="form-contact__label" for="form-phone">Контактный телефон</label>
+							<input id="form-phone" class="form-contact__input" autocomplete="off" type="text" name="form[]" data-required="tel" data-error="Ошибка" data-value="+7()">
+						</div>
+						<div class="form-contact__line">
+							<label class="form-contact__label" for="form-fio">ФИО</label>
+							<input id="form-fio" class="form-contact__input" autocomplete="off" type="text" name="form[]" data-required="" data-error="Ошибка" data-value="">
+						</div>
+						<div class="form-contact__line form-contact__line_button">
+							<button class="form-contact__button button _icon-angle-right" type="submit">Отправить</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
