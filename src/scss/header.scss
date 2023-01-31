@@ -36,6 +36,20 @@
 			left: 0;
 			background-color: #fff;
 		}
+		._header-scroll & {
+			position: fixed;
+			top: -200%;
+			left: 0;
+			width: 100%;
+			padding: rem(15) 0;
+			&::before {
+				background-color: #f5f5f5;
+			}
+		}
+		._header-show & {
+			transition: all 0.3s ease 0s;
+			top: 0;
+		}
 	}
 }
 .top-header {
