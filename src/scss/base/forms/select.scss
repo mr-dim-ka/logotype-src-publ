@@ -8,26 +8,30 @@
 	}
 	// .select__title
 	&__title {
-		color: inherit;
 		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
 		cursor: pointer;
+		border: 1px solid #e6e6e6;
 		width: 100%;
-		border-radius: 4px;
+		height: rem(40);
+		padding: 0 rem(20);
+		@extend %ffroboto;
+		color: #282828;
 	}
 	// .select__value
 	&__value {
 		display: flex;
 		align-items: center;
 		height: rem(30);
-		padding: 0 rem(15);
+		// padding: 0 rem(15);
 		gap: rem(10);
 		> * {
 			flex: 1 1 auto;
 		}
 		&:after {
 			content: "";
+			@extend %ic;
+			content: "\f105";
+			transform: rotate(90deg);
 			align-self: stretch;
 			flex: 0 0 10px;
 			transition: all 0.3s ease 0s;
@@ -35,7 +39,7 @@
 			justify-content: center;
 			align-items: center;
 			._select-open & {
-				transform: rotate(-180deg);
+				transform: rotate(-90deg);
 			}
 		}
 		&._select-pseudo-label {
@@ -64,7 +68,7 @@
 		left: 0;
 		background-color: #fff;
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		border: 1px solid #e6e6e6;
 		border-top: 0;
 		padding: 10px 0px 5px 0px;
 	}
@@ -88,12 +92,13 @@
 		cursor: pointer;
 		padding: 5px 15px;
 		color: inherit;
+		@extend %ffroboto;
 		&._select-selected {
 			background-color: #eee;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				background: $orangeColor;
 			}
 		}
 	}

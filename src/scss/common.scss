@@ -2,6 +2,7 @@
 %ffroboto {
 	font-family: Roboto;
 }
+//========================================================================================================================================================
 
 .info-block {
 	@media (min-width: $mobile) {
@@ -34,5 +35,32 @@
 	&__text {
 		line-height: 1.29;
 		letter-spacing: em(0.14, 14);
+	}
+}
+
+//========================================================================================================================================================
+
+.swiper-button-prev,
+.swiper-button-next {
+	width: rem(40);
+	height: rem(40);
+	border: 1px solid #dadada;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	color: #908e8e;
+	transition: background-color 0.3s ease 0s;
+	&.swiper-button-disabled {
+		cursor: default;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $orangeColor;
+		}
 	}
 }

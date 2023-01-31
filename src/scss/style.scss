@@ -64,7 +64,7 @@ $responsiveType: 1;
 
 body {
 	line-height: 1.28; /* 18/14 */
-	letter-spacing: em(0.01);
+	letter-spacing: em(0.01, 14);
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;

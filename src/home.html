@@ -9,9 +9,6 @@
 			<main class="page">
 				<section class="page__main mainpage">
 					<div class="mainpage__container">
-						<!-- <div class="mainpage__image-ibg">
-							<img src="@img/main-bg.png" alt="">
-						</div> -->
 						<div class="mainpage__body">
 							<div class="mainpage__slider swiper">
 								<div class="mainpage__wrapper swiper-wrapper">
@@ -52,8 +49,8 @@
 										</div>
 									</div>
 								</div>
-								<button type="button" class="mainpage__swiper-button-prev _icon-angle-left"></button>
-								<button type="button" class="mainpage__swiper-button-next _icon-angle-right"></button>
+								<button type="button" class="mainpage__swiper-button-prev swiper-button-prev _icon-angle-left"></button>
+								<button type="button" class="mainpage__swiper-button-next swiper-button-next _icon-angle-right"></button>
 							</div>
 						</div>
 					</div>
@@ -118,10 +115,195 @@
 						</div>
 					</div>
 				</section>
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
-</html>
+				<section class="page__about about-module">
+					<div class="about-module__container">
+						<div class="about-module__body">
+							<h3 class="about-module__title">О компании</h3>
+							<div class="about-module__text">
+								Компания специализируется на оказании услуг в сфере корпоративного права, налогового консалтинга, представительства в судах, ликвидации и банкротства предприятий. На сегодняшний день, коллектив компании объединяет
+								высокопрофессиональных экспертов имеющих
+								специализации в отдельных областях права.
+							</div>
+							<a class="about-module__button button _icon-angle-right" href="#">Узнать больше</a>
+						</div>
+					</div>
+				</section>
+				<section class="page__contact contact-module">
+					<div class="contact-module__container">
+						<div class="contact-module__info info-block">
+							<div class="info-block__title">Получить Консультацию</div>
+							<div class="info-block__text">
+								Комплексный подход к вашему вопросу, своевременная правовую помощь, представление интересов во всех судебных инстанциях.
+							</div>
+						</div>
+						<form class="contact-module form-contact" action="#">
+							<div class="form-contact__column form-contact__column_1">
+								<div class="form-contact__line">
+									<label class="form-contact__label" for="form-email">E-mail</label>
+									<input id="form-email" class="form-contact__input" autocomplete="off" type="text" name="form[]" data-required="email" data-error="Ошибка" data-value="">
+								</div>
+								<div class="form-contact__line">
+									<label class="form-contact__label" for="form-phone">Контактный телефон</label>
+									<input id="form-phone" class="form-contact__input" autocomplete="off" type="text" name="form[]" data-required="tel" data-error="Ошибка" data-value="">
+								</div>
+								<div class="form-contact__line">
+									<label class="form-contact__label" for="form-fio">ФИО</label>
+									<input id="form-fio" class="form-contact__input" autocomplete="off" type="text" name="form[]" data-required="" data-error="Ошибка" data-value="">
+								</div>
+								<div class="form-contact__line">
+									<label class="form-contact__label" for="form-thema">Тема вопроса</label>
+									<select class="form-contact__select" id="form-thema" name="form[]" data-class-modif="form">
+										<option value="1" selected>Пункт №1</option>
+										<option value="2">Пункт №2</option>
+										<option value="3">Пункт №3</option>
+										<option value="4">Пункт №4</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-contact__column form-contact__column_2">
+								<div class="form-contact__line form-contact__line_area">
+									<label class="form-contact__label" for="form-message">Сообщение</label>
+									<textarea id="form-message" class="form-contact__area" autocomplete="off" name="form[]" data-value="" data-error="Ошибка" data-autoheight></textarea>
+								</div>
+								<div class="form-contact__line form-contact__line_button">
+									<button class="form-contact__button button _icon-angle-right" type="submit">Получить консультацию</button>
+
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+				<section class="page__advantages advantages">
+					<div class="advantages__container">
+						<div class="advantages__items">
+							<div class="advantages__item">
+								<div class="item-advantages">
+									<div class="item-advantages__icon">
+										<img src="@img/icons/check.png" alt="">
+									</div>
+									<div class="item-advantages__title">
+										Десятки добровольных ликвидаций ежемесячно
+									</div>
+									<div class="item-advantages__text">
+										Мы умеем минимизировать все риски в процессе добровольной ликвидации юридических лиц.
+									</div>
+								</div>
+							</div>
+							<div class="advantages__item">
+								<div class="item-advantages">
+									<div class="item-advantages__icon">
+										<img src="@img/icons/check.png" alt="">
+									</div>
+									<div class="item-advantages__title">
+										Отличное знание законов в сфере банкротства
+									</div>
+									<div class="item-advantages__text">
+										Позволяют нам эффективно отстаивать как интересы кредиторов, так и интересы собственников проблемной организации.
+									</div>
+								</div>
+							</div>
+							<div class="advantages__item">
+								<div class="item-advantages">
+									<div class="item-advantages__icon">
+										<img src="@img/icons/check.png" alt="">
+									</div>
+									<div class="item-advantages__title">
+										Большой опыт сопровождения банкротства
+									</div>
+									<div class="item-advantages__text">
+										Мы обладаем большим опытом сопровождения процедур банкротства предприятий.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__news news">
+					<div class="news__container">
+						<div class="news__top">
+							<div class="news__info info-block">
+								<div class="info-block__title">Новости Компании</div>
+								<div class="info-block__text">
+									Комплексный подход к вашему вопросу, своевременная правовую помощь, представление интересов во всех судебных инстанциях.
+								</div>
+							</div>
+							<a class="news__button button-grey" href="#">Открыть все новости</a>
+						</div>
+						<div class="news__body">
+							<div class="news__column">
+								<div class="news__slider swiper">
+									<div class="news__wrapper swiper-wrapper">
+										<div class="news__slide slide-news swiper-slide">
+											<div class="slide-news__content">
+												<div class="slide-news__icon _icon-quote-right"></div>
+												<div class="slide-news__title">Банкротство и ликвидация предприятия в Украине</div>
+												<div class="slide-news__text">
+													«На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права. На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права. На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права...»
+												</div>
+												<div class="slide-news__author">Андрей Ворошилов, генеральный директор компании Bankom</div>
+											</div>
+										</div>
+										<div class="news__slide slide-news swiper-slide">
+											<div class="slide-news__content">
+												<div class="slide-news__icon _icon-quote-right"></div>
+												<div class="slide-news__title">Банкротство и ликвидация предприятия в Украине</div>
+												<div class="slide-news__text">
+													«На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права. На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права. На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права...»
+												</div>
+												<div class="slide-news__author">Андрей Ворошилов, генеральный директор компании Bankom</div>
+											</div>
+										</div>
+										<div class="news__slide slide-news swiper-slide">
+											<div class="slide-news__content">
+												<div class="slide-news__icon _icon-quote-right"></div>
+												<div class="slide-news__title">Банкротство и ликвидация предприятия в Украине</div>
+												<div class="slide-news__text">
+													«На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права. На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права. На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права...»
+												</div>
+												<div class="slide-news__author">Андрей Ворошилов, генеральный директор компании Bankom</div>
+											</div>
+										</div>
+									</div>
+									<div class="news__swiper-buttons">
+										<button type="button" class="news__swiper-button-prev swiper-button-prev _icon-angle-left"></button>
+										<button type="button" class="news__swiper-button-next swiper-button-next _icon-angle-right"></button>
+									</div>
+								</div>
+							</div>
+							<div class="news__column">
+								<div class="news__cards">
+									<div class="news__card">
+										<div class="card-news">
+											<div class="card-news__date">03.04</div>
+											<div class="card-news__img-ibg">
+												<img src="@img/news/news-card/01.jpg" alt="">
+											</div>
+											<div class="card-news__title">Новость компании</div>
+											<div class="card-news__text">
+												На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права...»
+											</div>
+										</div>
+									</div>
+									<div class="news__card">
+										<div class="card-news">
+											<div class="card-news__date">03.04</div>
+											<div class="card-news__img-ibg">
+												<img src="@img/news/news-card/02.jpg" alt="">
+											</div>
+											<div class="card-news__title">Новость компании</div>
+											<div class="card-news__text">
+												На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях права...»
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</main>
+				@@include('html/_footer.htm',{})
+			</div>
+			@@include('html/_popup.htm',{})
+			@@include('html/_js.htm',{})
+		</body>
+	</html>
