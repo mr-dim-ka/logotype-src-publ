@@ -182,6 +182,23 @@
 	&__item {
 		// flex: 1 1 33.333%;
 		// padding: 0 rem(15);
+		transform: scale(0);
+		opacity: 0;
+		transition: all 0.3s ease 0s;
+		@for $var from 1 to 4 {
+			$delay: $var * 0.2;
+			&:nth-child(#{$var}) {
+				@if $var==1 {
+					transition: all 0.8s ease 0s;
+				} @else {
+					transition: all 0.8s ease #{$delay + s};
+				}
+			}
+		}
+		&._watcher-view {
+			transform: scale(1);
+			opacity: 1;
+		}
 	}
 }
 
@@ -285,15 +302,21 @@
 		font-size: rem(24);
 		font-weight: 500;
 		color: #ffffff;
+		transition: all 0.8s ease 0s;
+		@extend %anim-top;
 	}
 	// .about-module__text
 	&__text {
 		line-height: 1.7;
 		color: $secondaryColor;
+		@extend %anim-top;
+		transition: all 0.8s ease 0.2s;
 	}
 	// .about-module__button
 	&__button {
 		color: #fff;
+		@extend %anim-top;
+		transition: all 0.8s ease 0.4s;
 	}
 }
 
@@ -426,6 +449,23 @@
 	}
 	// .advantages__item
 	&__item {
+		transform: scale(0);
+		opacity: 0;
+		transition: all 0.3s ease 0s;
+		@for $var from 1 to 4 {
+			$delay: $var * 0.2;
+			&:nth-child(#{$var}) {
+				@if $var==1 {
+					transition: all 0.8s ease 0s;
+				} @else {
+					transition: all 0.8s ease #{$delay + s};
+				}
+			}
+		}
+		&._watcher-view {
+			transform: scale(1);
+			opacity: 1;
+		}
 	}
 }
 .item-advantages {
@@ -454,10 +494,10 @@
 		font-size: rem(18);
 		line-height: 1.33;
 		color: #fff;
+		flex: 1 1 auto;
 	}
 	// .item-advantages__text
 	&__text {
-		flex: 1 1 auto;
 		line-height: 1.71;
 		color: $secondaryColor;
 	}
